@@ -1,0 +1,24 @@
+!include transformer.yaml
+
+epochs: 20
+batch_size: 32
+
+optimizer:
+  name: torch.optim.Adam
+  betas: 
+  - 0.9
+  - 0.98
+  eps: 1.0e-9
+
+scheduler:
+  name: Scheduler
+  emb_dim: 128 # make sure this aligns with the model
+  warm_steps: 10000
+
+loss:
+  name: TransationalLoss
+  label_smoothing: 0.1
+
+val_loss:
+  name: TransationalLoss
+  label_smoothing: 0.0

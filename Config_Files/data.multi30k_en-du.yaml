@@ -1,0 +1,10 @@
+vocab : 
+  name : Multi30k
+  language-pair : 
+    -'en'
+    -'de'
+dataset : 
+  name : Multi30k
+  language-pair : 
+    -'en'
+    -'de'
